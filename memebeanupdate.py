@@ -58,6 +58,7 @@ def mempkg():
     def anspos(anstxt):
         pos = random.randint(1, 4)
         ml = ["illuminati", "dogo", "Doge", "somebody one told me", "To be continued", "Vines"]
+        ml.append("Moth")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -162,9 +163,9 @@ def mempkg():
     def nxtf():
         pm = -1
 
-        question = random.randint(0, 5)
+        question = random.randint(0, 6)
         if question == pm:
-            question = random.randint(0, 5)
+            question = random.randint(0, 6)
 
         if question == 0:
             que("this meme has a triangle in it", "illuminati")
@@ -179,10 +180,14 @@ def mempkg():
             que("This meme includes odd, sarcstic sayings with bad grammer written in comic sans EX:Such meme.", "Doge")
             pm = 3
         if question == 4:
-            que("this meme frome the movie shreck has the opening lyrics of ______", "somebody one told me")
+            que("This meme frome the movie shreck has the opening lyrics of ______", "somebody one told me")
             pm = 4
         if question == 5:
             que("This meme is a very popular subset of memes and has its own subsets", "Vines")
+        if question == 6:
+            que("This dead meme features a _____", "Moth")
+        #if question == 7:
+            
 
 
     questionl = tk.Label(practicef, text="loading")
