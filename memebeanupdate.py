@@ -37,12 +37,12 @@ def mempkg():
     def c():
         global qcor
         qcor = qcor + 1
-        print("c")
+        #print("c")
         nxtf()
 
 
     def i():
-        print("i")
+        #print("i")
         nxtf()
 
 
@@ -57,8 +57,12 @@ def mempkg():
 
     def anspos(anstxt):
         pos = random.randint(1, 4)
-        ml = ["illuminati", "dogo", "Doge", "somebody one told me", "To be continued", "Vines"]
+        ml = ["Illuminati", "Dogo", "Doge", "Somebody Once Told Me", "To be Continued", "Vines"]
         ml.append("Moth")
+        ml.append("Spaget")
+        ml.append("Wii Sports")
+        ml.append("Sandwich")
+        ml.append("Oof")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -163,34 +167,49 @@ def mempkg():
     def nxtf():
         pm = -1
 
-        question = random.randint(0, 6)
+        question = random.randint(0, 10)
         if question == pm:
-            question = random.randint(0, 6)
+            question = random.randint(0, 10)
 
         if question == 0:
-            que("this meme has a triangle in it", "illuminati")
+            que("This meme has a triangle in it", "Illuminati")
             pm = 0
         if question == 1:
-            que("This memes includes the song roundabout", "To be continued")
+            que("This memes includes the song roundabout", "To be Continued")
             pm = 1
         if question == 2:
-            que("Fill in the blank. Gabe the _____.", "dogo")
+            que("Fill in the blank. Gabe the _____.", "Dogo")
             pm = 2
         if question == 3:
             que("This meme includes odd, sarcstic sayings with bad grammer written in comic sans EX:Such meme.", "Doge")
             pm = 3
         if question == 4:
-            que("This meme frome the movie shreck has the opening lyrics of ______", "somebody one told me")
+            que("This meme frome the movie shreck has the opening lyrics of ______", "Somebody Once Told Me")
             pm = 4
         if question == 5:
             que("This meme is a very popular subset of memes and has its own subsets", "Vines")
+            pm = 5
         if question == 6:
             que("This dead meme features a _____", "Moth")
-        #if question == 7:
-            
+            pm = 6
+        if question == 7:
+            que("What was touched in the Three Little Bears animation", "Spaget")
+            pm = 7
+        if question == 8:
+            que("What is the famous video game made by Nintendo for the Wii", "Wii Sports")
+            pm = 8
+        if question == 9:
+            que("Sorry I fell asleep while I was waiting on you to make me a _____", "Sandwich")
+            pm = 9
+        if question == 10:
+            que("This meme ofiginated form Roblox", "Oof")
+            pm = 10
+        
+
+        
 
 
-    questionl = tk.Label(practicef, text="loading")
+    questionl = tk.Label(practicef, text="Loading, press next to start")
     questionl.pack()
 
     toolbar = Frame(practicef, relief="raised", borderwidth=2, width=400, height=30)

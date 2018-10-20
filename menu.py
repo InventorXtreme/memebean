@@ -1,10 +1,11 @@
 import tkinter
 import memebeanupdate
+import shoutabout
 from tkinter import *
 import tkinter as tk
 import webbrowser
 from tkinter import messagebox
-import shoutabout
+
 ver = memebeanupdate.version
 url = "https://github.com/InventorXtreme/memebean"
 
