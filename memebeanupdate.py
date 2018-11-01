@@ -8,6 +8,8 @@ import random
 global version
 version = "0"
 def mempkg():
+    global pm
+    pm = -1
     global blockliste
     blocklist = 0
     global tbcm
@@ -63,6 +65,9 @@ def mempkg():
         ml.append("Wii Sports")
         ml.append("Sandwich")
         ml.append("Oof")
+        ml.append("LeBron James")
+        ml.append("Anime")
+        ml.append("Johnny Johnny, Yes Papa")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -165,11 +170,12 @@ def mempkg():
 
 
     def nxtf():
-        pm = -1
+        global pm
 
-        question = random.randint(0, 10)
+
+        question = random.randint(0, 12)
         if question == pm:
-            question = random.randint(0, 10)
+            question = random.randint(0, 12)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
@@ -190,6 +196,7 @@ def mempkg():
             que("This meme is a very popular subset of memes and has its own subsets", "Vines")
             pm = 5
         if question == 6:
+            #Meme sugested by JoeBiz
             que("This dead meme features a _____", "Moth")
             pm = 6
         if question == 7:
@@ -204,6 +211,12 @@ def mempkg():
         if question == 10:
             que("This meme ofiginated form Roblox", "Oof")
             pm = 10
+        if question == 11:
+            que("A kid says a famous basketball player's name over and over", "LeBron James")
+        if question == 12:
+            que("I have the power of God and _____ ond my side", "Anime")
+        if question == 13:
+            que("This meme has a kid eating sugar", "Johnny Johnny, Yes Papa")
         
 
         
