@@ -1,4 +1,3 @@
-
 import tkinter
 from tkinter import *
 import tkinter as tk
@@ -6,7 +5,7 @@ from tkinter import messagebox
 import random
 
 global version
-version = "0"
+version = "1.0.0"
 def mempkg():
     global pm
     pm = -1
@@ -20,7 +19,10 @@ def mempkg():
     qplaye = 0
     global qcor
     qcor = 0
-
+    global quiz
+    quiz = 0
+    global iftest
+    iftest = -1
 
     def gets():
         global qcor
@@ -117,6 +119,12 @@ def mempkg():
         menu.pack_forget()
         practicef.pack()
 
+    def test():
+        global iftest
+        menu.pack_forget()
+        practicef.pack()
+        iftest = 1
+
 
     def imdone():
         global qcor
@@ -166,12 +174,37 @@ def mempkg():
     practice = Button(menu, text="Practice", command=practice)
     practice.pack()
 
+    testbutton = Button(menu, text="Test", command=test)
+    testbutton.pack()
+
     practicef = Frame(root)
 
-
+    
+    
     def nxtf():
         global pm
+        global qcor
+        global qplayer
+        global quiz
+        global iftest
+        if iftest == 1:
+            quiz = quiz + 1
 
+            if quiz == 21:
+                if qcor == 20 or qcor == 19:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Dank Memer!")
+                if qcor == 18 or qcor == 17:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Memer!")
+                if qcor == 16 or qcor == 15:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're not bad.")
+                if qcor == 14 or qcor == 13:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Novice Memer.")
+                if qcor == 12 or qcor == 11:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" +  "\nYou're not great.")
+                if qcor == 10 or qcor == 9:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're sad.")
+                if qcor == 8 or qcor == 7 or qcor == 6 or qcor == 5 or qcor == 4 or qcor == 3 or qcor == 2 or qcor == 1 or qcor == 0:
+                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're a grandma who still doesn't know what the internet is.")
 
         question = random.randint(0, 12)
         if question == pm:
@@ -251,4 +284,3 @@ def mempkg():
     nxt.pack()
 
     root.mainloop()
-
