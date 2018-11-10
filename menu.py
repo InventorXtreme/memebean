@@ -24,11 +24,11 @@ main.title("Memebean dashboard")
 
 welcome = tk.Label(main, text="Welcome to Membean")
 welcome.pack(side=TOP)
-launch = Button(main, text="launch memebean", command=start)
+launch = Button(main, text="Launch Memebean", command=start)
 launch.pack()
 shout = Button(main, text="Shoutouts", command=shouta)
 shout.pack()
-updater = Button(main, text="Check for and install updates", command=updatelink)
+updater = Button(main, text="Check for and Install Updates", command=updatelink)
 updater.pack()
 
 

@@ -23,6 +23,8 @@ def mempkg():
     quiz = 0
     global iftest
     iftest = -1
+    global quizque
+    quizque = 0
 
     def gets():
         global qcor
@@ -114,18 +116,54 @@ def mempkg():
         #menu.pack()
         #login.pack_forget()
 
+    def quizque10():
+        global iftest
+        global quizque
+        menu.pack_forget()
+        practicef.pack()
+        iftest = 1
+        quizque = 10
+
+    def quizque15():
+        global iftest
+        global quizque
+        menu.pack_forget()
+        practicef.pack()
+        iftest = 1
+        quizque = 15
+
+    def quizque20():
+        global iftest
+        global quizque
+        menu.pack_forget()
+        practicef.pack()
+        iftest = 1
+        quizque = 20
+
+    def quizque25():
+        global iftest
+        global quizque
+        menu.pack_forget()
+        practicef.pack()
+        iftest = 1
+        quizque = 25
 
     def practice():
         menu.pack_forget()
         practicef.pack()
 
     def test():
-        global iftest
-        menu.pack_forget()
-        practicef.pack()
-        iftest = 1
-
-
+        global quizque
+        root = tk.Tk()
+        ten = Button(root, text="10 Questions", command=quizque10)
+        ten.pack()
+        fifteen = Button(root, text="15 Questions", command=quizque15)
+        fifteen.pack()
+        twenty = Button(root, text="20 Questions", command=quizque20)
+        twenty.pack()
+        twentyfive = Button(root, text="25 Questions", command=quizque25)
+        twentyfive.pack()
+        
     def imdone():
         global qcor
         global qplaye
@@ -168,7 +206,7 @@ def mempkg():
     # lg = tk.Label(menu, image=lgo)
     # lg.pack()
 
-    menuchose = tk.Label(menu, text="chose an option:")
+    menuchose = tk.Label(menu, text="Choose an Option:")
     menuchose.pack()
 
     practice = Button(menu, text="Practice", command=practice)
@@ -187,28 +225,77 @@ def mempkg():
         global qplayer
         global quiz
         global iftest
+        global quizque
         if iftest == 1:
             quiz = quiz + 1
+            if quizque == 20:
+                if quiz == 21:
+                    if qcor == 20 or qcor == 19:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Dank Memer!")
+                    if qcor == 18 or qcor == 17:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Memer!")
+                    if qcor == 16 or qcor == 15:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're not bad.")
+                    if qcor == 14 or qcor == 13:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Novice Memer.")
+                    if qcor == 12 or qcor == 11:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" +  "\nYou're not great.")
+                    if qcor == 10 or qcor == 9:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're sad.")
+                    if qcor == 8 or qcor == 7 or qcor == 6 or qcor == 5 or qcor == 4 or qcor == 3 or qcor == 2 or qcor == 1 or qcor == 0:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're a grandma who still doesn't know what the internet is.")
+            if quizque == 25:
+                if quiz == 26:
+                    if qcor == 25 or qcor == 24 or qcor == 23 or qcor == 22:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou are a Dank Memer!")
+                    if qcor == 21 or qcor == 20 or qcor == 19:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou are a Memer!")
+                    if qcor == 18 or qcor == 17 or qcor == 16:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou're not bad.")
+                    if qcor == 15 or qcor == 14 or qcor == 13:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou are a Novice Memer.")
+                    if qcor == 12 or qcor == 11:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" +  "\nYou're not great.")
+                    if qcor == 10 or qcor == 9:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou're sad.")
+                    if qcor == 8 or qcor == 7 or qcor == 6 or qcor == 5 or qcor == 4 or qcor == 3 or qcor == 2 or qcor == 1 or qcor == 0:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 25" + "\nYou're a grandma who still doesn't know what the internet is.")
+            if quizque == 15:
+                if quiz == 16:
+                    if qcor == 15 or qcor == 14:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou are a Dank Memer!")
+                    if qcor == 13:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou are a Memer!")
+                    if qcor == 12 or qcor == 11:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou're not bad.")
+                    if qcor == 10 or qcor == 9:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou are a Novice Memer.")
+                    if qcor == 8 or qcor == 7:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" +  "\nYou're not great.")
+                    if qcor == 6 or qcor == 5:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou're sad.")
+                    if qcor == 4 or qcor == 3 or qcor == 2 or qcor == 1 or qcor == 0:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 15" + "\nYou're a grandma who still doesn't know what the internet is.")
+            if quizque == 10:
+                if quiz == 11:
+                    if qcor == 10:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou are a Dank Memer!")
+                    if qcor == 9:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou are a Memer!")
+                    if qcor == 8 or qcor == 7:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're not bad.")
+                    if qcor == 6:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou are a Novice Memer.")
+                    if qcor == 5:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" +  "\nYou're not great.")
+                    if qcor == 4 or qcor == 3:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're sad.")
+                    if qcor == 2 or qcor == 1 or qcor == 0:
+                        messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're a grandma who still doesn't know what the internet is.")
 
-            if quiz == 21:
-                if qcor == 20 or qcor == 19:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Dank Memer!")
-                if qcor == 18 or qcor == 17:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Memer!")
-                if qcor == 16 or qcor == 15:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're not bad.")
-                if qcor == 14 or qcor == 13:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou are a Novice Memer.")
-                if qcor == 12 or qcor == 11:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" +  "\nYou're not great.")
-                if qcor == 10 or qcor == 9:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're sad.")
-                if qcor == 8 or qcor == 7 or qcor == 6 or qcor == 5 or qcor == 4 or qcor == 3 or qcor == 2 or qcor == 1 or qcor == 0:
-                    messagebox.showinfo("Results", "" + str(qcor) + " out of 20" + "\nYou're a grandma who still doesn't know what the internet is.")
-
-        question = random.randint(0, 12)
+        question = random.randint(0, 13)
         if question == pm:
-            question = random.randint(0, 12)
+            question = random.randint(0, 13)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
@@ -230,7 +317,7 @@ def mempkg():
             pm = 5
         if question == 6:
             #Meme sugested by JoeBiz
-            que("This dead meme features a _____", "Moth")
+            que("This dead meme features a lamp", "Moth")
             pm = 6
         if question == 7:
             que("What was touched in the Three Little Bears animation", "Spaget")
@@ -242,7 +329,7 @@ def mempkg():
             que("Sorry I fell asleep while I was waiting on you to make me a _____", "Sandwich")
             pm = 9
         if question == 10:
-            que("This meme ofiginated form Roblox", "Oof")
+            que("This meme originated from Roblox", "Oof")
             pm = 10
         if question == 11:
             que("A kid says a famous basketball player's name over and over", "LeBron James")
