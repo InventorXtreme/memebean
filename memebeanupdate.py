@@ -163,7 +163,7 @@ def mempkg():
         twenty.pack()
         twentyfive = Button(root, text="25 Questions", command=quizque25)
         twentyfive.pack()
-        
+
     def imdone():
         global qcor
         global qplaye
@@ -217,8 +217,8 @@ def mempkg():
 
     practicef = Frame(root)
 
-    
-    
+
+
     def nxtf():
         global pm
         global qcor
@@ -337,9 +337,9 @@ def mempkg():
             que("I have the power of God and _____ ond my side", "Anime")
         if question == 13:
             que("This meme has a kid eating sugar", "Johnny Johnny, Yes Papa")
-        
 
-        
+
+
 
 
     questionl = tk.Label(practicef, text="Loading, press next to start")
