@@ -9,25 +9,36 @@ from tkinter import messagebox
 ver = memebeanupdate.version
 url = "https://github.com/InventorXtreme/memebean"
 def load(memepak):
-    #try:
-    mpkg = __import__(memepak)
-    TY = mpkg.TYPE
+    #MEMEPAK API/LOADER
+    try:
+        #import Pak
+        mpkg = __import__(memepak)
+        TY = mpkg.TYPE
 
 
-    if(TY == "NGUI"):
-        nw = tk.Tk()
-        nwwidget = mpkg.gui(nw)
-        nw.mainloop()
-    elif(TY == "AGUI"):
-        AGUIW = mpkg.gui(main2)
-    else:
-        secure = messagebox.askquestion("Error", "This Pak does not have a PakType, Allow it to run?")
-        if secure == "yes":
-            print("g")
-        mpkg.run()
-#except:
-        #print(memepak)
-        #messagebox.showerror("Error", "Memepack not found")
+        if(TY == "NGUI"):
+
+            #Create new GUI and load PakWidget
+            nw = tk.Tk()
+            nw.title(memepak)
+            nwwidget = mpkg.gui(nw)
+            nw.mainloop()
+        elif(TY == "AGUI"):
+            #add widget to current GUI
+            AGUIW = mpkg.gui(main2)
+        elif(TY == "SCRIPT"):
+            #run the script
+            mpkg.run()
+        else:
+            #SECURITY CHECK
+            secure = messagebox.askquestion("Error", "This Pak does not have a PakType, Allow it to run?")
+            if secure == "yes":
+                #run script
+                mpkg.run()
+    except ModuleNotFoundError:
+        messagebox.showerror("Error", "Memepack not found")
+    except ValueError:
+        messagebox.showerror("Error", "You cant load a MemePak with no name")
 # open update page
 def updatelink():
     webbrowser.open(url)
@@ -36,10 +47,12 @@ def start():
     memebeanupdate.mempkg()
 def shouta():
     shoutabout.thing()
-def loadb():
+def loadb(a):
     global exide
     impkg = exide.get()
     load(impkg)
+    a2 = a
+
 
 #def le()
 def loaderwin():
@@ -50,6 +63,7 @@ def loaderwin():
     exide.pack()
     loada = Button(main2, text="Load MemePak", command=loadb)
     loada.pack()
+    main2.bind("<Return>", loadb)
 
 main = tk.Tk()
 main.title("Memebean dashboard")
