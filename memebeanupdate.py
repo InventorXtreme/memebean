@@ -389,15 +389,17 @@ def mempkg():
         if question == 24:
             que("This meme was sang by a green dinosuar", "Yee")
             pm = 24
-        if question = 25:
+        if question == 25:
             que("What did Will Smith say at the end of YouTube rewind", "That's Hot")
             pm = 25
-        if question = 26:
+        if question == 26:
             que("This a fmous YouTuber says this saying at the begining of each video", "Hey Vsause")
             pm = 26
-        if question = 27:
+        if question == 27:
             que("It ain't much but it's ____", "honest work")
             pm = 27
+
+
     questionl = ttk.Label(practicef, text="Loading, press next to start")
     questionl.pack()
 

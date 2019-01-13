@@ -10,6 +10,7 @@ from tkinter import ttk
 ver = memebeanupdate.version
 url = "https://github.com/InventorXtreme/memebean"
 def load(memepak):
+    print(memepak)
     #MEMEPAK API/LOADER
     try:
         #import Pak
@@ -52,7 +53,7 @@ def loadb():
     global exide
     impkg = exide.get()
     load(impkg)
-    
+
 
 
 #def le()
@@ -64,7 +65,6 @@ def loaderwin():
     exide.pack()
     loada = ttk.Button(main2, text="Load MemePak", command=loadb)
     loada.pack()
-    main2.bind("<Return>", loadb)
 
 main = tk.Tk()
 main.title("Memebean dashboard")
