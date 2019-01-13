@@ -3,6 +3,8 @@ from tkinter import *
 import tkinter as tk
 from tkinter import messagebox
 import random
+from tkinter import ttk
+
 
 global version
 version = "1.0.0"
@@ -72,6 +74,20 @@ def mempkg():
         ml.append("LeBron James")
         ml.append("Anime")
         ml.append("Johnny Johnny, Yes Papa")
+        ml.append("Fre shAvac ado")
+        ml.append("The Lorax")
+        ml.append("Road Work Ahead")
+        ml.append("My Heart Will Go On")
+        ml.append("Youtube Rewind")
+        ml.append("Big Chungus")
+        ml.append("That's how the Mafia works")
+        ml.append("miss")
+        ml.append("I hate sand")
+        ml.append("Yeet")
+        ml.append("Yee")
+        ml.append("That's Hot")
+        ml.append("Hey Vsause")
+        ml.append("honest work")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -155,13 +171,13 @@ def mempkg():
     def test():
         global quizque
         root = tk.Tk()
-        ten = Button(root, text="10 Questions", command=quizque10)
+        ten = ttk.Button(root, text="10 Questions", command=quizque10)
         ten.pack()
-        fifteen = Button(root, text="15 Questions", command=quizque15)
+        fifteen = ttk.Button(root, text="15 Questions", command=quizque15)
         fifteen.pack()
-        twenty = Button(root, text="20 Questions", command=quizque20)
+        twenty = ttk.Button(root, text="20 Questions", command=quizque20)
         twenty.pack()
-        twentyfive = Button(root, text="25 Questions", command=quizque25)
+        twentyfive = ttk.Button(root, text="25 Questions", command=quizque25)
         twentyfive.pack()
 
     def imdone():
@@ -195,7 +211,7 @@ def mempkg():
     #ok = Button(login, text="OK", command=get)
     #ok.pack()
 
-    menu = Frame(root)
+    menu = ttk.Frame(root)
     menu.pack()
 
 
@@ -209,10 +225,10 @@ def mempkg():
     menuchose = tk.Label(menu, text="Choose an Option:")
     menuchose.pack()
 
-    practice = Button(menu, text="Practice", command=practice)
+    practice = ttk.Button(menu, text="Practice", command=practice)
     practice.pack()
 
-    testbutton = Button(menu, text="Test", command=test)
+    testbutton = ttk.Button(menu, text="Test", command=test)
     testbutton.pack()
 
     practicef = Frame(root)
@@ -293,9 +309,9 @@ def mempkg():
                     if qcor == 2 or qcor == 1 or qcor == 0:
                         messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're a grandma who still doesn't know what the internet is.")
 
-        question = random.randint(0, 13)
+        question = random.randint(0, 25)
         if question == pm:
-            question = random.randint(0, 13)
+            question = random.randint(0, 25)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
@@ -333,41 +349,81 @@ def mempkg():
             pm = 10
         if question == 11:
             que("A kid says a famous basketball player's name over and over", "LeBron James")
+            pm = 11
         if question == 12:
             que("I have the power of God and _____ ond my side", "Anime")
+            pm = 12
         if question == 13:
             que("This meme has a kid eating sugar", "Johnny Johnny, Yes Papa")
-
-
-
-
-
-    questionl = tk.Label(practicef, text="Loading, press next to start")
+            pm = 13
+        if question == 14:
+            que("This meme came from Del Taco", "Fre shAvac ado")
+            pm = 14
+        if question == 15:
+            que("I speak for the trees", "The Lorax")
+            pm = 15
+        if question == 16:
+            que("_____, I sure hope it does!", "Road Work Ahead")
+            pm = 16
+        if question == 17:
+            que("This is a song played on recorder", "My Heart Will Go On")
+            pm = 17
+        if question == 18:
+            que("This is the worst video of 2018", "Youtube Rewind")
+            pm = 18
+        if question == 19:
+            que("This is a meme about a fat rabbit", "Big Chungus")
+            pm = 19
+        if question == 20:
+            que("Level 1 Crook, Level 35 Boss", "That's how the Mafia works")
+            pm = 20
+        if question == 21:
+            que("Hit or miss, I guess I never ____", "miss")
+            pm = 21
+        if question == 22:
+            que("This is a line that Anikin Skywalker spoke in Star Wars", "I hate sand")
+            pm = 22
+        if question == 23:
+            que("This is commonly said when throwing things", "Yeet")
+            pm = 23
+        if question == 24:
+            que("This meme was sang by a green dinosuar", "Yee")
+            pm = 24
+        if question = 25:
+            que("What did Will Smith say at the end of YouTube rewind", "That's Hot")
+            pm = 25
+        if question = 26:
+            que("This a fmous YouTuber says this saying at the begining of each video", "Hey Vsause")
+            pm = 26
+        if question = 27:
+            que("It ain't much but it's ____", "honest work")
+            pm = 27
+    questionl = ttk.Label(practicef, text="Loading, press next to start")
     questionl.pack()
 
-    toolbar = Frame(practicef, relief="raised", borderwidth=2, width=400, height=30)
+    toolbar = ttk.Frame(practicef, relief="raised", borderwidth=2, width=400, height=30)
     toolbar.pack(side=tk.TOP)
     toolbar.pack_propagate(0)
 
-    imdone = Button(toolbar, text="I'm done", command=imdone)
+    imdone = ttk.Button(toolbar, text="I'm done", command=imdone)
     imdone.pack(side=tk.LEFT, anchor=E)
 
-    score = Button(toolbar, text="See your score", command=gets)
+    score = ttk.Button(toolbar, text="See your score", command=gets)
     score.pack(anchor=N, side=tk.RIGHT)
 
-    but1 = Button(practicef, text="loading...")
+    but1 = ttk.Button(practicef, text="loading...")
     but1.pack()
 
-    but2 = Button(practicef, text="loading...")
+    but2 = ttk.Button(practicef, text="loading...")
     but2.pack()
 
-    but3 = Button(practicef, text="loading...")
+    but3 = ttk.Button(practicef, text="loading...")
     but3.pack()
 
-    but4 = Button(practicef, text="loading...")
+    but4 = ttk.Button(practicef, text="loading...")
     but4.pack()
 
-    nxt = Button(practicef, text="NEXT", command=nxtf)
+    nxt = ttk.Button(practicef, text="NEXT", command=nxtf)
     nxt.pack()
 
     root.mainloop()

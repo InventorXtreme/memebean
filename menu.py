@@ -5,6 +5,7 @@ from tkinter import *
 import tkinter as tk
 import webbrowser
 from tkinter import messagebox
+from tkinter import ttk
 
 ver = memebeanupdate.version
 url = "https://github.com/InventorXtreme/memebean"
@@ -47,11 +48,11 @@ def start():
     memebeanupdate.mempkg()
 def shouta():
     shoutabout.thing()
-def loadb(a):
+def loadb():
     global exide
     impkg = exide.get()
     load(impkg)
-    a2 = a
+    
 
 
 #def le()
@@ -59,25 +60,25 @@ def loaderwin():
     global exide
     global main2
     main2 = tk.Tk()
-    exide = Entry(main2)
+    exide = ttk.Entry(main2)
     exide.pack()
-    loada = Button(main2, text="Load MemePak", command=loadb)
+    loada = ttk.Button(main2, text="Load MemePak", command=loadb)
     loada.pack()
     main2.bind("<Return>", loadb)
 
 main = tk.Tk()
 main.title("Memebean dashboard")
 
-welcome = tk.Label(main, text="Welcome to Memebean")
+welcome = ttk.Label(main, text="Welcome to Memebean")
 welcome.pack(side=TOP)
-launch = Button(main, text="Launch Memebean", command=start)
+launch = ttk.Button(main, text="Launch Memebean", command=start)
 launch.pack()
-shout = Button(main, text="Shoutouts", command=shouta)
+shout = ttk.Button(main, text="Shoutouts", command=shouta)
 shout.pack()
-updater = Button(main, text="Check for and Install Updates", command=updatelink)
+updater = ttk.Button(main, text="Check for and Install Updates", command=updatelink)
 updater.pack()
 #load MemePak Gui
-mpkgui = Button(main, text="MemePak Manager", command=loaderwin)
+mpkgui = ttk.Button(main, text="MemePak Manager", command=loaderwin)
 mpkgui.pack()
 
 
