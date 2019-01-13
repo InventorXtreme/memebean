@@ -309,9 +309,9 @@ def mempkg():
                     if qcor == 2 or qcor == 1 or qcor == 0:
                         messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're a grandma who still doesn't know what the internet is.")
 
-        question = random.randint(0, 25)
+        question = random.randint(0, 27)
         if question == pm:
-            question = random.randint(0, 25)
+            question = random.randint(0, 27)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
