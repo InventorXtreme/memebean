@@ -1,5 +1,5 @@
 # Memebean Release
-###### 1.1.2a1
+###### 1.2
 
 Memebean project
 

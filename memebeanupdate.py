@@ -6,8 +6,11 @@ import random
 from tkinter import ttk
 
 
+
 global version
-version = "1.1.2a1"
+version = "1.2"
+
+
 def mempkg():
     global pm
     pm = -1
@@ -91,6 +94,8 @@ def mempkg():
         ml.append("rip")
         ml.append("The airhorn")
         ml.append("got'm")
+        ml.append("9 year olds")
+        ml.append("Flex Tape")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -200,30 +205,10 @@ def mempkg():
 
     root = tk.Tk()
 
-    #login = Frame(root)
-    #login.pack()
 
-    # request block need list
-
-    #titlelbl = tk.Label(login, text="Enter ID CODE 1 if you do not have a code type 0")
-    #titlelbl.pack(side=tk.TOP)
-
-    #blocklist = Entry(login, bd=4, width=50)
-    #blocklist.pack(side=tk.TOP)
-
-    #ok = Button(login, text="OK", command=get)
-    #ok.pack()
 
     menu = ttk.Frame(root)
     menu.pack()
-
-
-
-    # dont use in showcase/update vids
-    # lgo = PhotoImage(file="logo.gif")
-
-    # lg = tk.Label(menu, image=lgo)
-    # lg.pack()
 
     menuchose = tk.Label(menu, text="Choose an Option:")
     menuchose.pack()
@@ -312,9 +297,9 @@ def mempkg():
                     if qcor == 2 or qcor == 1 or qcor == 0:
                         messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're a grandma who still doesn't know what the internet is.")
 
-        question = random.randint(0, 30)
+        question = random.randint(0, 32)
         if question == pm:
-            question = random.randint(0, 30)
+            question = random.randint(0, 32)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
@@ -410,6 +395,12 @@ def mempkg():
         if question == 30:
             que("Ladies and gentlemen, we _______","got'm")
             pm = 30
+        if question == 31:
+            que("This channel will stay the most subbed youtube channel thanks to the help of ____ ", "9 year olds")
+            pm = 31
+        if question == 32:
+            que("This product can fix anything","Flex Tape")
+            pm = 32
 
 
     questionl = ttk.Label(practicef, text="Loading, press next to start")
