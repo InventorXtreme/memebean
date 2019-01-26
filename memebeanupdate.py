@@ -7,7 +7,7 @@ from tkinter import ttk
 
 
 global version
-version = "1.0.0"
+version = "1.1.1"
 def mempkg():
     global pm
     pm = -1
