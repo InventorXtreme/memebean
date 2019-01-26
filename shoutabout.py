@@ -5,7 +5,7 @@ def thing():
     root = tk.Tk()
 
     shoutouts = Label(root, text="Programing:\nWhirlwind Developers\n"
-    "\nAlex Moening\nGoBananas2000\n\nShoutouts:\nInventorXtreme")
+    "\nAlex Moening\nGoBananas2000\nJoeBiz\n\nShoutouts:\nInventorXtreme\nJoeBiz")
     shoutouts.pack()
 
     root.mainloop()

@@ -40,7 +40,7 @@ def load(memepak):
     except ModuleNotFoundError:
         messagebox.showerror("Error", "Memepack not found")
     except ValueError:
-        messagebox.showerror("Error", "You cant load a MemePak with no name")
+        messagebox.showerror("Error", "You can't load a MemePak with no name")
 # open update page
 def updatelink():
     webbrowser.open(url)
