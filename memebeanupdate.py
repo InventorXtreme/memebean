@@ -96,6 +96,7 @@ def mempkg():
         ml.append("got'm")
         ml.append("9 year olds")
         ml.append("Flex Tape")
+        ml.append("Megalovania")
         oI = random.choice(ml)
         if oI == anstxt:
             oI = "blank"
@@ -232,6 +233,7 @@ def mempkg():
         global quizque
         if iftest == 1:
             quiz = quiz + 1
+            #Quiz Grading
             if quizque == 20:
                 if quiz == 21:
                     if qcor == 20 or qcor == 19:
@@ -297,9 +299,9 @@ def mempkg():
                     if qcor == 2 or qcor == 1 or qcor == 0:
                         messagebox.showinfo("Results", "" + str(qcor) + " out of 10" + "\nYou're a grandma who still doesn't know what the internet is.")
 
-        question = random.randint(0, 32)
+        question = random.randint(0, 33)
         if question == pm:
-            question = random.randint(0, 32)
+            question = random.randint(0, 33)
 
         if question == 0:
             que("This meme has a triangle in it", "Illuminati")
@@ -401,6 +403,9 @@ def mempkg():
         if question == 32:
             que("This product can fix anything","Flex Tape")
             pm = 32
+        if question == 33:
+            que("This song comes from Undertale", "Megalovania")
+            pm = 33
 
 
     questionl = ttk.Label(practicef, text="Loading, press next to start")
